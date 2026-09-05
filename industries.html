@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Industries Served | CA Vaibhav Saklecha</title>
+<meta name="description" content="50 industries: banking, insurance, fintech, manufacturing, real estate, healthcare, IT, energy, VC, PE, government and more.">
+<link rel="icon" type="image/png" href="ca-india.png"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css"></head><body>
+<nav id="nav"><a href="index.html" class="nav-logo">CA Vaibhav <span>Saklecha</span></a>
+<ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="finchase.html">Finchase</a></li><li><a href="industries.html">Industries</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="case-studies.html">Case Studies</a></li></ul>
+<a href="contact.html" class="nav-cta">Connect</a><button class="nav-burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button></nav>
+<div class="nav-drawer" id="drawer"><a href="index.html" onclick="closeDrawer()">Home</a><a href="about.html" onclick="closeDrawer()">About</a><a href="services.html" onclick="closeDrawer()">Services</a><a href="finchase.html" onclick="closeDrawer()">Finchase</a><a href="industries.html" onclick="closeDrawer()">Industries</a><a href="achievements.html" onclick="closeDrawer()">Achievements</a><a href="case-studies.html" onclick="closeDrawer()">Case Studies</a><a href="contact.html" onclick="closeDrawer()">Contact</a></div>
+<main class="page">
+<div class="breadcrumb"><a href="index.html">Home</a> / Industries</div>
+<span class="section-tag">Industries Served</span>
+<h1 class="section-h2">Deep in capital-intensive, <span class="accent">regulated sectors</span></h1>
+<p class="section-sub">Tap any image to see representative sub-segments from live mandates. Every sector below is selected through its photo — industry name sits at the bottom of each image.</p>
+<div class="ind-grid reveal" id="indGrid"></div>
+<div class="glass reveal ind-detail">
+<h3 id="indTitle"></h3>
+<div class="pill-row" id="indSubs" style="margin-top:1rem"></div>
+<p class="lead" id="indNote" style="margin-top:1rem;font-size:.85rem"></p>
+</div>
+<section class="reveal"><div class="btn-row"><a class="btn-primary" href="contact.html">Check fit for your sector</a><a class="btn-outline" href="case-studies.html">See related cases →</a></div></section>
+</main>
+<footer><div class="footer-logo">CA Vaibhav <span>Saklecha</span></div><div class="footer-copy">© <span data-year>2026</span> Vaibhav Saklecha · Indore</div><div class="footer-links"><a href="index.html">Home</a><a href="services.html">Services</a><a href="contact.html">Contact</a></div></footer>
+<a class="wa-float" href="https://wa.me/919090600001" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="white" width="26" height="26"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg></a>
+<button id="toTop" aria-label="Back to top">↑</button>
+<script src="assets/js/data.js"></script><script src="assets/js/main.js"></script>
+<script>
+const FALLBACK_IMG="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop";
+const INDS=[
+{name:"Banking",img:"https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",subs:["Term loans","Consortium finance","DSCR structuring"]},
+{name:"Insurance",img:"https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop",subs:["Bancassurance tie-ups","Actuarial reviews","Fund planning"]},
+{name:"Fintech",img:"https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop",subs:["Lending models","Investor decks","RBI compliance"]},
+{name:"Manufacturing",img:"https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=800&auto=format&fit=crop",subs:["Capex phasing","Term loans","Working capital"]},
+{name:"E-commerce",img:"https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=800&auto=format&fit=crop",subs:["Marketplace finance","Inventory funding","Unit economics"]},
+{name:"Retail",img:"https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop",subs:["Store rollouts","Lease structuring","Chain expansion"]},
+{name:"Real Estate",img:"https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop",subs:["Townships","Commercial leasing","RERA finance"]},
+{name:"Construction",img:"https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&auto=format&fit=crop",subs:["EPC finance","Project escrows","Equipment funding"]},
+{name:"Healthcare",img:"https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",subs:["Hospitals","Diagnostics roll-ups","Day-care chains"]},
+{name:"Pharmaceuticals",img:"https://images.unsplash.com/photo-1587854692152-cbe660dbde88?q=80&w=800&auto=format&fit=crop",subs:["Formulations","API units","Regulatory finance"]},
+{name:"Hospitality",img:"https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",subs:["Resorts","Hotel financing","Occupancy models"]},
+{name:"Tourism",img:"https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=800&auto=format&fit=crop",subs:["Circuits & packages","Ministry schemes","Resort funding"]},
+{name:"Aviation",img:"https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop",subs:["MRO units","Lease finance","Route economics"]},
+{name:"Logistics",img:"https://images.unsplash.com/photo-1553413077-190dd305871c?q=80&w=800&auto=format&fit=crop",subs:["Warehousing SPVs","3PL contracts","DSCR escrows"]},
+{name:"Entertainment",img:"https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=800&auto=format&fit=crop",subs:["Studios & venues","Content finance","IP structuring"]},
+{name:"Media",img:"https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=800&auto=format&fit=crop",subs:["Broadcast & print","Digital media","Ad-revenue models"]},
+{name:"Telecommunications",img:"https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop",subs:["Tower finance","Subscriber models","Spectrum planning"]},
+{name:"Information Technology",img:"https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",subs:["SaaS","BSE SME listing","QIB readiness"]},
+{name:"Education",img:"https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=800&auto=format&fit=crop",subs:["K-12 & skilling","Fee-securitised debt","Campus expansion"]},
+{name:"Agriculture",img:"https://images.unsplash.com/photo-1625246333195-78d9c38ad449?q=80&w=800&auto=format&fit=crop",subs:["Farm-to-retail","Cold chain","Agri credit"]},
+{name:"FMCG",img:"https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop",subs:["Distribution finance","Brand rollouts","Dealer funding"]},
+{name:"Automobiles",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=800&auto=format&fit=crop",subs:["Dealership finance","Ancillaries","EV transition"]},
+{name:"Energy",img:"https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=800&auto=format&fit=crop",subs:["PPA modelling","Tariff structuring","Project finance"]},
+{name:"Oil & Gas",img:"https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=800&auto=format&fit=crop",subs:["City-gas capex","Refining & retail","Hedging review"]},
+{name:"Mining",img:"https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=800&auto=format&fit=crop",subs:["Lease finance","Royalty models","Equipment capex"]},
+{name:"Textiles",img:"https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=800&auto=format&fit=crop",subs:["Spinning & weaving","Processing units","Export finance"]},
+{name:"Chemicals",img:"https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop",subs:["Agro-chem","Forensic diligence","Earn-outs"]},
+{name:"Defense",img:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop",subs:["Offset structuring","MSME vendors","Tender finance"]},
+{name:"Aerospace",img:"https://images.unsplash.com/photo-1517976487492-5750f3195933?q=80&w=800&auto=format&fit=crop",subs:["Components & MRO","Certification finance","Export offsets"]},
+{name:"Biotechnology",img:"https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop",subs:["R&D finance","Trials funding","Lab capex"]},
+{name:"Venture Capital",img:"https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop",subs:["Deal screening","Portfolio reviews","Exit planning"]},
+{name:"Private Equity",img:"https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=800&auto=format&fit=crop",subs:["Buyouts","Growth rounds","Value creation"]},
+{name:"Investment Banking",img:"https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop",subs:["DRHP & listing","QIB outreach","Issuer readiness"]},
+{name:"Stockbroking",img:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",subs:["Compliance review","Client-fund audit","Expansion finance"]},
+{name:"Wealth Management",img:"https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",subs:["Family offices","Succession plans","Portfolio structuring"]},
+{name:"Non-Profit Organizations",img:"https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=800&auto=format&fit=crop",subs:["Grant utilisation","Impact audits","80G/CSR compliance"]},
+{name:"Government Departments",img:"https://images.unsplash.com/photo-1587474260584-136574528ed5?q=80&w=800&auto=format&fit=crop",subs:["MoU scoring","BRSR","Fund-use audit"]},
+{name:"Tax Consultancies",img:"https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop",subs:["Direct & indirect review","Litigation support","Transfer pricing"]},
+{name:"Auditing Firms",img:"https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",subs:["Peer reviews","Quality audits","Co-sourcing"]},
+{name:"Law Firms",img:"https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=800&auto=format&fit=crop",subs:["Deal documentation","Escrow design","Retainer models"]},
+{name:"Corporate Training",img:"https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",subs:["Academy finance","B2B contracts","Scale-up models"]},
+{name:"Startups",img:"https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",subs:["Pre-seed to Series A","ESOP design","Runway planning"]},
+{name:"Public Relations",img:"https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=800&auto=format&fit=crop",subs:["Agency retainers","Campaign finance","Growth advisory"]},
+{name:"Event Management",img:"https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=800&auto=format&fit=crop",subs:["Venue finance","Seasonal cashflows","Vendor escrows"]},
+{name:"Shipping",img:"https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=800&auto=format&fit=crop",subs:["Fleet finance","Port logistics","Charter models"]},
+{name:"Renewable Energy",img:"https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=800&auto=format&fit=crop",subs:["Solar & hybrid","Green-linked finance","PPA modelling"]},
+{name:"Infrastructure",img:"https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop",subs:["Textile parks (PM MITRA)","Multi-tenant mfg parks","SIDBI consortium"]},
+{name:"Microfinance",img:"https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?q=80&w=800&auto=format&fit=crop",subs:["SHG & JLG models","BC partnerships","Portfolio audits"]},
+{name:"Fashion",img:"https://images.unsplash.com/photo-1445206577130-7012fc63f01d?q=80&w=800&auto=format&fit=crop",subs:["Labels & D2C","Export houses","Working capital"]},
+{name:"International Trade",img:"https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=800&auto=format&fit=crop",subs:["EXIM finance","LC structuring","Forex review"]}
+];
+const grid=document.getElementById('indGrid'),title=document.getElementById('indTitle'),subs=document.getElementById('indSubs'),note=document.getElementById('indNote');
+grid.innerHTML=INDS.map((k,i)=>`<button class="ind-tile${i===0?' active':''}" data-i="${i}" aria-label="${k.name}"><img loading="lazy" src="${k.img}" alt="${k.name}" onerror="this.onerror=null;this.src='${FALLBACK_IMG}'"><figcaption>${k.name}</figcaption></button>`).join('');
+function showInd(i){const k=INDS[i];title.textContent=k.name;subs.innerHTML=k.subs.map(x=>`<span class="pill">${x}</span>`).join('');note.textContent=k.name+': representative sub-segments from live mandates. Ask us for a comparable case.';grid.querySelectorAll('.ind-tile').forEach((b,j)=>b.classList.toggle('active',j===i));}
+grid.addEventListener('click',e=>{const b=e.target.closest('.ind-tile');if(b)showInd(+b.dataset.i);});
+showInd(0);
+</script>
+</body></html>
